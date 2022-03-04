@@ -3,7 +3,11 @@
 
 int main(void){
 
+    printf("hello world \n");
+    char str []= "String";
 
-    printf("hello world\n");
-    
+    printf(*str);
+
+    return 0;
+
 }
