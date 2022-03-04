@@ -29,5 +29,6 @@ float price(int percent, float pricer){
     //printf("%f",percentval);
     float newprice = pricer - priceOff;
 
-    return newprice;
+    return newprice; 
+    
 }
