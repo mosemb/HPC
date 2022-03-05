@@ -7,7 +7,7 @@
 int main(void){
 
     char * s = "mose";
-    char * t = malloc(strlen(s)+1);
+    char * t = malloc(strlen(s)+1);  // Using malloc to assign values. 
     strcpy(t,s);
 
     if(t==NULL){
