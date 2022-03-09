@@ -65,7 +65,6 @@ int main(void)
 {
 
     Student Student1;
-
     Student1.setName("Lukaaya James");
     Student1.setId(456689);
     Student1.setGradeDate(2019);
