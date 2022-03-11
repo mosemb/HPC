@@ -48,24 +48,33 @@ char Gameboard::getGameSpace(int row, int column){
 
 int Gameboard::fourInRow(){
     int win = 0;
+    int sumxs;
+
     for(int i = 0; i<4; i++){
+
+        sumxs=0;
         for(int j =0; j<4; j++){
             if(gameSpace[i][j]=='x')
             {
-                win = 1;
+                sumxs = sumxs+1; }
             }
+           // cout<< " Row number :"<<i<< "Has result "<<win << " \n";
         }
-    }
+
+        
+    
     return win;
 }
 
 void Gameboard::printInfo(){
+
     for(int i =0; i<4; i++){
         for(int j=0; j<4; j++){
             cout<<"Element at row " << i << " and Column :"<< j << " is "<< gameSpace[i][j] << "\n";
         }
         cout<<"\n";
     }
+
 }
 
 

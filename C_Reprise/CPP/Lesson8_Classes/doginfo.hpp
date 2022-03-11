@@ -9,6 +9,8 @@ class Dog{
     int linceNumber; 
     
 public:
+    Dog();
+    ~Dog();
     void setName(string nameInput);
     void setLicenceNo(int licenceNo);
     string getName();
@@ -17,6 +19,14 @@ public:
 
 };
 
+Dog::Dog(){
+    name = "Unknown";
+}
+
+Dog::~Dog(){
+    
+    cout<< "Deleting object "<< "\n";
+}
 
 void Dog::setName(string nameInput){
     name = nameInput;

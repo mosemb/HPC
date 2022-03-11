@@ -23,20 +23,20 @@ int main(void){
 
     switch (operation)
     {
-    case  'A'/* constant-expression */:
+    case  '+'/* constant-expression */:
         /* code */
         result = a+b;
         cout << "Result is "<< result << "\n"; 
         break;
-    case 'S':
+    case '-':
           result = a-b;
           cout << "Result is "<< result << "\n"; 
           break;
-    case 'D':
+    case '/':
           result = a/b;
           cout << "Result is "<< result  << "\n"; 
           break;
-    case 'M':
+    case '*':
           result = a*b; 
           cout << "Result is "<< result << "\n"; 
           break;            
@@ -48,5 +48,5 @@ int main(void){
     }
 
 
-
+    return 0;
 }
