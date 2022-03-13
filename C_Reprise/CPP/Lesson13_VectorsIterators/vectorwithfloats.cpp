@@ -6,6 +6,10 @@ using namespace std;
 
 void printelements(vector<float> vectorFloat);
 void printelementsin(vector<int> vectorint);
+void insertelements( vector<int> vectorint);
+void emplaceVector(vector<int> vectorInt);
+void clearVector(vector<int>vectorclear);
+void eraseVectorElements(vector<int> vectorElerase);
 
 int main(void){
 
@@ -20,8 +24,18 @@ int main(void){
 
     // Vector ints 
     vector<int> vectorInts; 
+    vector<int>::iterator it;
     vectorInts.assign(2,23); 
     printelementsin(vectorInts); // Printvalues 
+    insertelements( vectorInts);
+    emplaceVector(vectorInts);
+    clearVector(vectorInts);
+    eraseVectorElements(vectorInts);
+
+    
+    //it = vectorInts.begin()+1;
+    //vectorInts.insert(it, -2);
+    //vectorInts.insert(it,-3);
 
    
 
@@ -62,12 +76,59 @@ void printelements(vector<float> vectorFloat){
     }
 
     // Insert elements in a vector 
-
     void insertelements( vector<int> vectorint){
-        
         vector<int>::iterator it; 
-        
+        it = vectorint.begin();
 
+        //vectorint.insert(it,-1);
+        vectorint.insert(it, -2);
+        it = vectorint.begin()+1;
+        vectorint.insert(it,-3);
+        it = vectorint.begin()+3;
+        vectorint.insert(it,-45);
+
+        for(it = vectorint.begin(); it!=vectorint.end(); ++it){
+            printf("Element inserted %d \n", *it);
+        }
 
 
     }
+
+
+    void emplaceVector(vector<int>vectorInt){
+
+        vector<int>::iterator it;
+        it = vectorInt.begin();
+        vectorInt.emplace(it,-44);
+        it = vectorInt.begin()+2; 
+        vectorInt.emplace(it,-33);
+        it = vectorInt.begin()+4;
+        vectorInt.emplace(it,-55);
+
+        for(it=vectorInt.begin(); it!=vectorInt.end(); ++it){
+            printf("Element emplaced %d :\n",*it);
+        }
+
+    }
+
+    void clearVector(vector<int>vectorclear){
+        printf("The size of this vector is  %d: \n", vectorclear.size());
+        
+        vector<int>::iterator it;
+        for(it=vectorclear.begin(); it!=vectorclear.end(); ++it){
+            printf(" Value before clear %d \n",*it);
+        }
+
+        vectorclear.clear();
+        printf("The size of this vector after clear is   %d: \n", vectorclear.size());
+    }
+
+
+    void eraseVectorElements(vector<int> vectorElerase){
+
+         printf("Size of vector before erase is %d \n",vectorElerase.size());
+         vectorElerase.erase(vectorElerase.begin());
+         printf("Size of vector after erase is %d \n",vectorElerase.size());
+
+    }
+
