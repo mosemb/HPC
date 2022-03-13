@@ -10,6 +10,7 @@ void insertelements( vector<int> vectorint);
 void emplaceVector(vector<int> vectorInt);
 void clearVector(vector<int>vectorclear);
 void eraseVectorElements(vector<int> vectorElerase);
+void popBack(vector<int> vectorPopback);
 
 int main(void){
 
@@ -31,6 +32,7 @@ int main(void){
     emplaceVector(vectorInts);
     clearVector(vectorInts);
     eraseVectorElements(vectorInts);
+    popBack(vectorInts);
 
     
     //it = vectorInts.begin()+1;
@@ -55,6 +57,7 @@ void printelements(vector<float> vectorFloat){
     }
 
     void printelementsin(vector<int> vectorint){
+        // Inserts and prints elements at a particular location 
 
     // Make iterator
     vector<int>::iterator itInt; 
@@ -77,6 +80,9 @@ void printelements(vector<float> vectorFloat){
 
     // Insert elements in a vector 
     void insertelements( vector<int> vectorint){
+
+        // Inserts elements at a particular location in a vector 
+
         vector<int>::iterator it; 
         it = vectorint.begin();
 
@@ -96,6 +102,7 @@ void printelements(vector<float> vectorFloat){
 
 
     void emplaceVector(vector<int>vectorInt){
+        // Inserts elements inpace in a vector 
 
         vector<int>::iterator it;
         it = vectorInt.begin();
@@ -112,6 +119,7 @@ void printelements(vector<float> vectorFloat){
     }
 
     void clearVector(vector<int>vectorclear){
+        //Clears the vector of all items. 
         printf("The size of this vector is  %d: \n", vectorclear.size());
         
         vector<int>::iterator it;
@@ -125,10 +133,23 @@ void printelements(vector<float> vectorFloat){
 
 
     void eraseVectorElements(vector<int> vectorElerase){
-
+        // Erases the element specified. 
          printf("Size of vector before erase is %d \n",vectorElerase.size());
          vectorElerase.erase(vectorElerase.begin());
          printf("Size of vector after erase is %d \n",vectorElerase.size());
 
     }
+
+
+    void popBack(vector<int> vectorPopback){
+         // Removes the last element of the vector 
+         printf("\n");
+         printf("Size of vector before popback is %d \n",vectorPopback.size());
+         vectorPopback.pop_back();
+         printf("Size of vector after popback is %d \n",vectorPopback.size());
+
+    }
+
+
+
 
